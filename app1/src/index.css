@@ -1,0 +1,51 @@
+.html {
+  height: 100%;
+}
+.body {
+  height:100%;
+}
+
+.slide-container{
+  float: left;
+  width: 100%;
+  padding: 10px;
+  overflow-x: hidden;
+}
+
+.image-container {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  animation: slide infinite 50s alternate;
+}
+.image-container:hover {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  0%   {margin-left: 0px;}
+  50% {margin-left: -5100px;}
+  100%   {margin-left: 0px;}
+}
+
+img:hover {
+  filter: None !important;
+}
+
+@media only screen and (max-width: 450px) {
+  .slide-container{
+    overflow-y: hidden;
+  }
+
+  .image-container {    
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @keyframes slide {
+    0%    {margin-top: 0px;}
+    50%   {margin-top: -2500px;}
+    100%  {margin-top: 0px;}
+  }
+}
+
