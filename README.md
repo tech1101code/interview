@@ -12,4 +12,4 @@ go to folder app1 : `cd app1`
 
 install dependencies : `npm i`
 
-run the server : `npm run start`
+run the app : `npm run start`
